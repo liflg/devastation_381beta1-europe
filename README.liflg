@@ -1,0 +1,61 @@
+
+			Devastation: europe version 381beta1
+	    (http://www.groovegames.com/Games/Devastation/)
+
+===============================================================
+
+ABOUT
+=======
+
+Devastation is a high-action, teamplay-oriented, first person game powered 
+by heavily modified Unreal Engine technology. 
+Set in the very near future, dozens of unique characters are pit against 
+each other in urban combat spanning several devastated locales. 
+Devastation focuses on intense multiplayer action 
+with an equally satisfying single-player experience. 
+The revolutionary AI enables computer-controlled players 
+to be both strategically cunning enemies, as well as highly intelligent allies. 
+Devastation reinvents the FPS genre with a fresh game type 
+that will appeal to both hardcore DM and Team-Play fans alike. 
+Also included for online tournament play are maps specifically designed 
+for traditional DM and CTF game-types.
+
+RUNNING THE GAME
+==================
+
+	run "devastation" to play
+
+NOTES
+======
+
+	- after installation run:
+	
+	  echo XXXXX-XXXXX-XXXXX-XXXXX > $INSTALLDIR/System/cdkey
+	  
+	  where all those Xs are your valid CD key 
+	  CASE IS IMPORTANT and THE DASHES ARE IMPORTANT
+
+	- it's beta 1 and there won't be another one or a final release 
+	  because the developer Digitalo Studios closed
+	
+	- known bugs:
+	  
+	  1. RLE compression of BMP images not supported
+             Can't find file '../Save/*.bmp' for import
+	  
+	  2. if you interact with the big red computer terminal it will crash 
+	     (on map Urban South 1st map, 2nd mission)
+	
+	  3. auto saves don't work
+
+	- keyboard is set to US layout by default for better
+          compatibility. Uncomment the line with NOUSLAYOUT if
+          you don't want to use it
+	
+TECHNICAL SUPPORT
+===================
+
+	Website: http://liflg.org/
+	Forum:   http://liflg.org/forum/
+
+The Linux Installers for Linux Gamers Team

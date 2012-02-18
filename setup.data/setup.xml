@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<install 
+ product="devastation" 
+ desc="Devastation" 
+ version="381beta1-europe-2"
+ binarypath="/usr/local/bin"
+ category="Game"
+ promptbinaries="yes"
+ express="no"
+ superuser="no"
+ reinstall="no"
+ reinstallnowarning="yes"
+ nopromptoverwrite="yes"
+ reinstallfast="yes"
+ splashpos="left"
+ nomenuitems="no"
+>
+
+<require command="sh setup.data/tmp_check.sh 1200">
+	There is not enough free diskspace in your TMPDIR 
+	You need about: 1200 MB
+	Try: export TMPDIR=/where/you/have/alot/of/freespace
+</require>
+
+<cdrom id="disc1" name="Devastation CD-ROM">Devastation.exe</cdrom>
+
+ <eula>
+  license.txt
+ </eula>
+
+ <readme>
+  README.liflg
+ </readme>
+
+ <option install="true" required="true" size="1000M">
+   Base Install
+  <help>Required for play</help>
+  
+  <binary arch="any" libc="any" binpath="bin/" symlink="devastation" icon="devastation.xpm" name="Devastation" desc="Devastation" play="no">
+   devastation
+  </binary>
+
+  <!-- ensures that the right cd is in place -->
+  <files cdromid="disc1">
+  </files>
+
+  <script cdromid="disc1">
+   sh setup.data/install-disc1.sh
+  </script>
+
+  <files srcpath="data/App_Executables">
+   Animations/*.ukx
+   Help/*.bmp
+   KarmaData/*.kaw
+   KarmaData/*.ka
+   KarmaData/*.PSK
+   Maps/*.dvs
+   Movies/*.RoQ
+   Music/*.ogg
+   Music/Cinematic/*.ogg
+   Sounds/*.uax
+   StaticMeshes/*.usx
+   System/*.u
+   System/*.vqa
+   System/*.md5
+   Textures/*.utx
+   Textures/*.UTX
+  </files>
+
+  <files>
+   devastation.xpm
+   deva_mix_1.tar.bz2
+   devastation-beta1-bins.tar.bz2
+  </files>
+
+	<exclusive>
+		<option install="true" size="0M">
+			english
+			<script>
+				setup.data/default_ini.sh int
+			</script>
+		</option>
+		<option install="false" size="0M">
+			german
+			<script>
+				setup.data/default_ini.sh det
+			</script>
+			<files srcpath="System/det" path="System">
+			 DInterface.u
+			</files>
+		</option>
+		<option install="false" size="0M">
+			french
+			<script>
+				setup.data/default_ini.sh frt
+			</script>
+		</option>
+		<option install="false" size="0M">
+			italian
+			<script>
+				setup.data/default_ini.sh itt
+			</script>
+		</option>
+		<option install="false" size="0M">
+			polish
+			<script>
+				setup.data/default_ini.sh pol
+			</script>
+			<files srcpath="Textures/pol" path="Textures">
+			 DFonts.utx
+			</files>
+		</option>
+		<option install="false" size="0M">
+			russian
+			<script>
+				setup.data/default_ini.sh rut
+			</script>
+			<files srcpath="Textures/rut" path="Textures">
+			 DFonts.utx
+			</files>
+		</option>
+	</exclusive>
+
+ </option>
+</install>
